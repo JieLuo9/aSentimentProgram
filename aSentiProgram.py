@@ -50,7 +50,7 @@ def sentimentKey():
     txt = ""
     text = entry_k.get("1.0", END)
     options = {}
-    # print(list[acbox])
+    print(list[acbox])
     options["type"] = list[acbox]
     result = client.commentTag(text, options)
     print(result)
@@ -59,8 +59,8 @@ def sentimentKey():
 
             tmp = "负面情绪的关键词：" + item['prop'] + item['adj'] + '\n'
             txt += tmp
-            # print(txt)
-            # print("负面情绪的关键词：" + item['prop'] + item['adj'])
+            print(txt)
+            print("负面情绪的关键词：" + item['prop'] + item['adj'])
 
         if item['sentiment'] == 1:
 
@@ -72,11 +72,11 @@ def sentimentKey():
 
             tmp = "正面情绪的关键词：" + item['prop'] + item['adj'] + '\n'
             txt += tmp
-            # print(txt)
-            # print("正面情绪的关键词：" + item['prop'] + item['adj'])
-    # print(txt)
+            print(txt)
+            print("正面情绪的关键词：" + item['prop'] + item['adj'])
+    print(txt)
     aMessageBox2(txt)
-    # print(result)
+    print(result)
 
 
 def sentimentClassify():
